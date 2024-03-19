@@ -5,9 +5,10 @@ main(){
         p("enter any number : ");
         scanf("%d",&n);
         rem=n%10;
-		while(n>=10){
-		n=n/10;	
-		}
-		sum=n;
-			p("sum of first and last digit : %d",rem+sum);
+			while(n>=10)
+			{
+				n=n/10;	
+			}
+		sum=n+rem;
+			p("sum of first and last digit : %d",sum);
 }

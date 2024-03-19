@@ -17,7 +17,7 @@ main()
 	{
 		if(a>c)
 		{
-			if(c>d)
+			if(a>d)
 			{
 				printf("%d is max",a);
 			}
@@ -62,10 +62,6 @@ main()
 				printf("%d is max",d);
 			}
 		}
-
-
-
-
 
 	}
 
