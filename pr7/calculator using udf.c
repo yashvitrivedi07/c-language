@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 #define p printf
 #define s scanf
 
@@ -54,7 +55,7 @@ int main()
 		
 	
 	
-	p("\n\nenter your choice : ");
+	cprintf("\n\nenter your choice : ");
 	s("%d",&n);
 	
     
@@ -62,12 +63,12 @@ int main()
 	switch(n)
 	{
 		case 1:
-			p("Enter the first number: ");
+			p("\n\nEnter the first number: ");
 			s("%d",&a);
 			p("\nEnter the second number: ");
 			s("%d",&b);
 			
-			p("\n\n Addition of %d and %d = %d\n\n\n",a ,b, calculator(n,a,b));
+			p("\n\n ANS : Addition of %d and %d = %d\n\n\n",a ,b, calculator(n,a,b));
 		
 			goto call;
 			if(n==0)
@@ -160,9 +161,12 @@ int main()
 		{
 			if(b==0||a==0)
 				{
-					p("Cannot be divided by 0");
+					p("\n\nCannot be divided by 0");
+					return 0;
 				}
-			return a/b;
+			else{
+				return a/b;
+			}
 		}
 		else if(n==5)
 		{
