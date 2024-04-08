@@ -9,9 +9,9 @@ void leap(int a , int b);
 void main()
 {
 	int a,b;
-	p("enter year : ");
+	p("enter 1st year : ");
 	s("%d",&a);
-	p("\nenter year : ");
+	p("\nenter 2nd year : ");
 	s("%d",&b);
 	
 		leap(a,b);

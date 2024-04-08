@@ -6,34 +6,36 @@
 #define p printf
 #define s scanf
 
-int magic(int n);
+void magic(int n);
 void main()
 {
 	int n;
 	p("enter any number : ");
 	s("%d",&n);
 	magic(n);
-	
-	
+
 }
 
-int magic(int n)
+void magic(int n)
 {
-	int rem,mul=1,sum=0;
-	
-	
-	if(n!=0)
+	int rem,mul=1,sum=0,random;
+	int real = n;
+
+	while(n!=0)
 	{
 		rem=n%10;
-		mul *= rem;
 		sum += rem;
+		mul *= rem;
 		n=n/10;
 		
-		p("%d",mul);
-		magic(n);
 	}
-	
-	
-
-	
+	if(sum==mul)
+	{
+		p("%d = magic number",real);
+	}
+	else
+	{
+		p("%d = not magic number",real);
+	}	
+			
 }
