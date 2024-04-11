@@ -20,4 +20,53 @@ Percent => 91.00%
 
 */
 
+#include<stdio.h>
+#define p printf
+#define s scanf
+
+struct marksheet
+{
+	int rollno;
+	char name[30];
+	int chemistry;
+	int mathematics;
+	int physics;
+	int total;
+	int percent;
+};
+
+main()
+{
+	int n;
+	p("Enter no of students : ");
+	s("%d",&n);
+	
+	struct marksheet m[n];
+	
+	for(i=0; i<n; i++)
+	{
+		p("Enter Roll no : ");
+		s("%d",&m[i].rollno);
+		
+		p("Enter Roll no : ");
+		s("%s",&m[i].name);
+		
+		p("Enter Roll no : ");
+		s("%d",&m[i].chemistry);
+		
+		p("Enter Roll no : ");
+		s("%d",&m[i].mathematics;
+		
+		p("Enter Roll no : ");
+		s("%d",&m[i].physics);
+		
+	
+		
+		
+	}
+}
+
+
+
+
 
