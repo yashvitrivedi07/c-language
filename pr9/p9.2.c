@@ -31,39 +31,63 @@ struct marksheet
 	int chemistry;
 	int mathematics;
 	int physics;
-	int total;
-	int percent;
+
 };
 
 main()
 {
-	int n;
+	int n,i;
 	p("Enter no of students : ");
 	s("%d",&n);
 	
 	struct marksheet m[n];
+	int total[n];
+	float per;
 	
 	for(i=0; i<n; i++)
 	{
-		p("Enter Roll no : ");
+		p("\n\n--- : Student no %d :---\n",i+1);
+		p("\nEnter Roll no : ");
 		s("%d",&m[i].rollno);
-		
-		p("Enter Roll no : ");
-		s("%s",&m[i].name);
-		
-		p("Enter Roll no : ");
+		fflush(stdin);
+		p("Enter student name : ");
+		s("%[^\n]",&m[i].name);
+		fflush(stdin);
+		p("Enter chemistry marks : ");
 		s("%d",&m[i].chemistry);
-		
-		p("Enter Roll no : ");
-		s("%d",&m[i].mathematics;
-		
-		p("Enter Roll no : ");
+		fflush(stdin);
+		p("Enter mathematic marks : ");
+		s("%d",&m[i].mathematics);
+		fflush(stdin);
+		p("Enter physics marks : ");
 		s("%d",&m[i].physics);
 		
+	}
 	
+	
+	for(i=0; i<n; i++)
+	{
+		total[i] = m[i].chemistry + m[i].mathematics + m[i].physics;
+	
+	}
+	
+	for(i=0; i<n; i++)
+	{
+		
+		p("\n\n--- : Student no %d :---\n",i+1);
+		p("\n%s :(%d)\n",m[i].name,m[i].rollno);
+		p("CHEMISTRY : %d\n",m[i].chemistry);
+		p("MATHEMATICS: %d\n",m[i].mathematics);
+		p("PHYSICS : %d\n",m[i].physics);
+		p("TOTAL : %d\n",total[i]);
+	
+		
+		per = ((float)total[i] / 300) * 100;
+		p("PERCENTAGE : %.2f",per);
 		
 		
 	}
+	
 }
 
 
