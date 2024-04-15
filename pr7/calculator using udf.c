@@ -45,103 +45,91 @@ int main()
 
 	int n,a,b;
 	
-	call :
-	p("Press 1 for +\n");
-	p("Press 2 for -\n");
-	p("Press 3 for *\n");
-	p("Press 4 for /\n");
-	p("Press 5 for %\n");
-	p("Press 0 for the exit");
-		
-	
-	
-	cprintf("\n\nenter your choice : ");
-	s("%d",&n);
-	
-    
-	
-	switch(n)
-	{
-		case 1:
-			p("\n\nEnter the first number: ");
-			s("%d",&a);
-			p("\nEnter the second number: ");
-			s("%d",&b);
-			
-			p("\n\n ANS : Addition of %d and %d = %d\n\n\n",a ,b, calculator(n,a,b));
-		
-			goto call;
-			if(n==0)
-			{
-				break;
-			}
-			break;
-				
-		case 2:
-			p("Enter the first number: ");
-			s("%d",&a);
-			p("\nEnter the second number: ");
-			s("%d",&b);
-			
-			p("\n\nSubtraction of %d and %d = %d\n\n",a,b,calculator(n,a,b));
-			goto call;
-				if(n==0)
-				{
-					break;
-				}
-			break;
-		case 3:
-			p("Enter the first number: ");
-			s("%d",&a);
-			p("\nEnter the second number: ");
-			s("%d",&b);
-			
-			p("\n\nMultiplication of %d and %d = %d\n\n",a,b,calculator(n,a,b));
-			goto call;
-				if(n==0)
-				{
-					break;
-				}
-			break;
-		case 4:
-			p("Enter the first number: ");
-			s("%d",&a);
-			p("\nEnter the second number: ");
-			s("%d",&b);
-			
-			p("\n\nDivision of %d and %d = %d\n\n",a,b,calculator(n,a,b));
-			goto call;
-				if(n==0)
-				{
-					break;
-				}
-				
-				
-			break;
-		case 5:
-			p("Enter the first number: ");
-			s("%d",&a);
-			p("\nEnter the second number: ");
-			s("%d",&b);	
-			
-			p("\n\nModus of %d and %d = %d\n\n",a,b,calculator(n,a,b));
-			goto call;
-				if(n==0)
-				{
-					break;
-				}
-			break;
-		default :
-			p("-----Invalid Input---\n\n");
-				goto call;
-				if(n==0)
-				{
-					break;
-				}
-			
 
+    while(n=1)
+    {
+    	
+		p("Press 1 for +\n");
+		p("Press 2 for -\n");
+		p("Press 3 for *\n");
+		p("Press 4 for /\n");
+		p("Press 5 for %\n");
+		p("Press 0 for the exit");
+			
+		
+		
+		printf("\n\nenter your choice : ");
+		s("%d",&n);
+		
+	
+	
+	if(n==0)
+	{
+		break;
+	}
+	else{
+	
+		
+	
+		switch(n)
+		{
+			case 1:
+				p("\n\nEnter the first number: ");
+				s("%d",&a);
+				p("\nEnter the second number: ");
+				s("%d",&b);
+				
+				p("\n\n ANS : Addition of %d and %d = %d\n\n\n",a ,b, calculator(n,a,b));
+			
+			
+				break;
+					
+			case 2:
+				p("Enter the first number: ");
+				s("%d",&a);
+				p("\nEnter the second number: ");
+				s("%d",&b);
+				
+				p("\n\nSubtraction of %d and %d = %d\n\n",a,b,calculator(n,a,b));
+			
+				break;
+			case 3:
+				p("Enter the first number: ");
+				s("%d",&a);
+				p("\nEnter the second number: ");
+				s("%d",&b);
+				
+				p("\n\nMultiplication of %d and %d = %d\n\n",a,b,calculator(n,a,b));
+		
+				break;
+			case 4:
+				p("Enter the first number: ");
+				s("%d",&a);
+				p("\nEnter the second number: ");
+				s("%d",&b);
+				
+				p("\n\nDivision of %d and %d = %d\n\n",a,b,calculator(n,a,b));
+				
+					
+				break;
+			case 5:
+				p("Enter the first number: ");
+				s("%d",&a);
+				p("\nEnter the second number: ");
+				s("%d",&b);	
+				
+				p("\n\nModus of %d and %d = %d\n\n",a,b,calculator(n,a,b));
+				
+				break;
+				
+			default :
+				p("-----Invalid Input---\n\n");
+			}
+		}
 	}
 }
+	
+
 	
 	int calculator(int n,int a,int b)
 	{
@@ -174,7 +162,6 @@ int main()
 		}
 	}
 	
-
 
 
 
